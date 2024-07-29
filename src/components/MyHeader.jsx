@@ -1,7 +1,6 @@
 import { Layout, Menu } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 import { useMemo } from 'react';
-import { SettingOutlined, UserOutlined } from '@ant-design/icons';
 const { Header } = Layout;
 
 const items = [

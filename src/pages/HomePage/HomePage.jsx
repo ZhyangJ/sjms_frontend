@@ -10,14 +10,12 @@ const HomePage = () => {
     } = theme.useToken();
     return (
         <Layout>
-            // 顶部导航栏
             <MyHeader selectedKeys={[]} />
             <Content
                 style={{
                     padding: '0 48px',
                 }}
             >
-              //  面包屑导航
                 <Breadcrumb
                     style={{
                         margin: '16px 0',
@@ -38,7 +36,6 @@ const HomePage = () => {
                     这是首页
                 </div>
             </Content>
-          // 底部导航栏
             <MyFooter />
         </Layout>
     );
