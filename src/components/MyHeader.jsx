@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { SettingOutlined, UserOutlined } from '@ant-design/icons';
 const { Header } = Layout;
 
-const items1 = [
+const items = [
     {
         key: '1',
         label: <Link to="/Kidney-Cancer-Molecular-Model">肾癌分子模型</Link>,
@@ -23,10 +23,10 @@ const items1 = [
     }
 ];
 
-function MyHeader() {
+function MyHeader({ selectedKeys }) {
     const location = useLocation();
     const currentPath = location.pathname; // 获取当前路径
-    const selectedKey = useMemo(() => {
+    const defaultSelectedKey = useMemo(() => {
         if (currentPath.startsWith('/Kidney-Cancer-Molecular-Model')) {
             return '1';
         } else if (currentPath.startsWith('/DCCD-Features-Overview')) {
@@ -36,7 +36,7 @@ function MyHeader() {
         } else if (currentPath.startsWith('/DCCD-Identification-Tool')) {
             return '4';
         } else {
-            return '1'; // 如果没有匹配，默认返回
+            return null; // 如果没有匹配，不选中导航栏
         }
     }, [currentPath]);
     return (
@@ -51,8 +51,8 @@ function MyHeader() {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    selectedKeys={[selectedKey]}
-                    items={items1}
+                    selectedKeys={selectedKeys !== undefined ? selectedKeys : [defaultSelectedKey]}
+                    items={items}
                     style={{
                         flex: 1,
                         minWidth: 0,

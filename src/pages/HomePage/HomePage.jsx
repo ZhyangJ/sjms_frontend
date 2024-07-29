@@ -1,42 +1,16 @@
 import React from 'react';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import MyHeader from '../../components/MyHeader';
 import MyFooter from '../../components/MyFooter';
-const { Header, Content, Footer } = Layout;
+import MyHeader from '../../components/MyHeader';
+const { Content } = Layout;
 
-const items = new Array(3).fill(null).map((_, index) => ({
-    key: String(index + 1),
-    label: `nav ${index + 1}`,
-}));
 const HomePage = () => {
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
     return (
         <Layout>
-            <MyHeader />
-            {/* <Header
-                style={{
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 1,
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
-                <div className="demo-logo" />
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    items={items}
-                    style={{
-                        flex: 1,
-                        minWidth: 0,
-                    }}
-                />
-            </Header> */}
+            <MyHeader selectedKeys={[]} />
             <Content
                 style={{
                     padding: '0 48px',
@@ -54,12 +28,12 @@ const HomePage = () => {
                 <div
                     style={{
                         padding: 24,
-                        minHeight: 380,
+                        minHeight: 600,
                         background: colorBgContainer,
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                    这是首页
                 </div>
             </Content>
             <MyFooter />
