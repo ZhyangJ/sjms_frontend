@@ -19,6 +19,10 @@ const items = [
     {
         key: '4',
         label: <Link to="/DCCD-Identification-Tool">DCCD鉴定工具</Link>,
+    },
+    {
+        key: '5',
+        label: <Link to="/Team-Introduction">团队介绍</Link>,
     }
 ];
 
@@ -34,7 +38,9 @@ function MyHeader({ selectedKeys }) {
             return '3';
         } else if (currentPath.startsWith('/DCCD-Identification-Tool')) {
             return '4';
-        } else {
+        }else if (currentPath.startsWith('/Team-Introduction')) {
+            return '5';
+        }else {
             return null; // 如果没有匹配，不选中导航栏
         }
     }, [currentPath]);
