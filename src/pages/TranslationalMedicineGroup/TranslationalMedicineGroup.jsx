@@ -1,12 +1,10 @@
-// 团队介绍
+// 转化医学组
 import React from 'react';
 import { Breadcrumb, Layout, theme } from 'antd';
 import MyHeader from '../../components/MyHeader';
 import MyFooter from '../../components/MyFooter';
-import { Button, Flex } from 'antd';
-
 const { Content } = Layout;
-const TeamIntroduction = () => {
+const TranslationalMedicineGroup = () => {
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
@@ -35,19 +33,12 @@ const TeamIntroduction = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    这是团队介绍页
+                    这是转化医学组页
                 </div>
             </Content>
-
-            <div class="button-container">
-                <Button className="button">临床顾问组</Button>
-                <Button className="button">转化医学组</Button>
-                <Button className="button">软件研发组</Button>
-            </div>
-
             <MyFooter />
         </Layout>
     );
 }
 
-export default TeamIntroduction;
+export default TranslationalMedicineGroup;
