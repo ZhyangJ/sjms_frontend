@@ -1,8 +1,8 @@
 // 临床顾问组
 import React from 'react';
 import { Breadcrumb, Layout, theme } from 'antd';
-import MyHeader from '../../components/MyHeader';
-import MyFooter from '../../components/MyFooter';
+import MyHeader from '../../../components/MyHeader';
+import MyFooter from '../../../components/MyFooter';
 const { Content } = Layout;
 const ClinicalAdvisoryGroup = () => {
     const {
@@ -10,21 +10,8 @@ const ClinicalAdvisoryGroup = () => {
     } = theme.useToken();
     return (
         <Layout>
-            <MyHeader />
-            <Content
-                style={{
-                    padding: '0 48px',
-                }}
-            >
-                <Breadcrumb
-                    style={{
-                        margin: '16px 0',
-                    }}
-                >
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                    <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
+            <Content>
+                
                 <div
                     style={{
                         padding: 24,
@@ -33,10 +20,10 @@ const ClinicalAdvisoryGroup = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
+                    <h2 style={{ textAlign: 'center' }}>临床顾问组</h2>
                     这是临床顾问组页
                 </div>
             </Content>
-            <MyFooter />
         </Layout>
     );
 }
