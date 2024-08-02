@@ -22,7 +22,7 @@ const TeamIntroduction = () => {
         backgroundColor: '#38B474',
         color: 'white',
         flex: 1, // 使按钮占据相等的空间
-        margin: '10px', // 为每个按钮添加一些间距
+        margin: '10px', // 按钮间距
         textAlign: 'center', // 使按钮内文本居中
     };
 
